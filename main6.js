@@ -17,5 +17,3 @@ console.log(z);
 //quotient
 z = x % y;
 console.log(z);
-
-//reminder

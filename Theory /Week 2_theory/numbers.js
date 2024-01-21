@@ -32,8 +32,25 @@ b = Number.parseInt(b, 10);
 let sum = a + b;
 console.log(sum);*/
 
-let x = 15;
+/*let x = 15;
 let y = "10";
 y = Number.parseInt(y, 10);
 let subtraction = x - y;
-console.log(subtraction);
+console.log(subtraction);*/
+
+// Limiting Decimal Places in JS
+
+/*let number = 2.34567;
+let limitedNumber = number.toFixed(2);
+console.log(limitedNumber);*/
+
+// JavaScript Math Object
+
+/*let num = -7.77;
+let absolute = Math.abs(num);
+console.log(absolute);
+*/
+
+let num = -5.58;
+let rounded = Math.round(num);
+console.log(rounded);

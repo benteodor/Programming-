@@ -1,7 +1,7 @@
-const age = 27;
-const name = "Teodor";
-const isStudent = true;
-const hobbies = ["cooking", "tennis"];
+let age = 27;
+let name = "Teodor";
+let isStudent = true;
+let hobbies = ["cooking", "tennis"];
 let schoolName = "Business College";
 let grade = "10";
 

@@ -26,8 +26,14 @@ console.log(numericValue);*/
 // The first parameter is the string that you'd like to convert into a number. The second argument is the radix that will be used in the conversion. The radix is the base of the numerical system that you'd like to use. For most use cases the radix you'd like to use is 10 which represents the decimal system.
 
 // Exercise (cases for converting to a number)
-let a = 10;
+/*let a = 10;
 let b = "30";
 b = Number.parseInt(b, 10);
 let sum = a + b;
-console.log(sum);
+console.log(sum);*/
+
+let x = 15;
+let y = "10";
+y = Number.parseInt(y, 10);
+let subtraction = x - y;
+console.log(subtraction);

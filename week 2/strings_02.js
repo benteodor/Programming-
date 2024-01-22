@@ -7,13 +7,5 @@ function shoutMyName(name) {
   return name.toUpperCase();
 }
 console.log(shoutMyName("Sam"));
-
-function shoutMyName(name) {
-  return name.toUpperCase();
-}
 console.log(shoutMyName("Charley"));
-
-function shoutMyName(name) {
-  return name.toUpperCase();
-}
 console.log(shoutMyName("alex"));

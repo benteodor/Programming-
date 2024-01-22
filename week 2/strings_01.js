@@ -7,3 +7,5 @@ function getChartCount(str) {
   return str.length;
 }
 console.log(getChartCount("Sam"));
+console.log(getChartCount("Alex 123"));
+console.log(getChartCount("Charley is here"));

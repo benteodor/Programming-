@@ -4,3 +4,5 @@ function getLastCharacter(name) {
   return name[2];
 }
 console.log(getLastCharacter("Sam"));
+console.log(getLastCharacter("Alex"));
+console.log(getLastCharacter("Charley"));

@@ -1,7 +1,7 @@
 // Complete the function evenOrOdd such that it returns the string "even" when the number parameter it receives is even and "odd" otherwise.
 
 function evenOrOdd(number) {
-  if (8 % 2) {
+  if (number % 2 === 0) {
     return "even";
   } else;
   return "odd";

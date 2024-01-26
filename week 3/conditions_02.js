@@ -9,3 +9,5 @@ function getTemperature(temperature) {
 }
 
 getTemperature(Number(prompt("What is the current temperature?")));
+
+

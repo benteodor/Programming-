@@ -7,6 +7,7 @@ function evenOrOdd(number) {
   return "odd";
 }
 
-console.log(evenOrOdd(25)); // "odd"
+// "odd"
+console.log(evenOrOdd(25));
 console.log(evenOrOdd(18)); // "even"
 console.log(evenOrOdd(-17)); // "odd"

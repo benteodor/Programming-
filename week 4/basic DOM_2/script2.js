@@ -11,9 +11,15 @@ Ensure the input field is cleared after adding the fruit to the list.
 
 */
 
-const inputBtn = document.getElementById("addFruitBtn");
-const inputEl = document.getElementById("fruitInput");
-function getVal() {
-  console.log(inputEl.value);
-}
-inputBtn.addEventListener("retrieve", getVal);
+let inputText = document.querySelector("#fruitInput");
+let fruitList = document.querySelector("#fruitList");
+
+const addFruit = () => {
+  let newElement = document.createElement("li");
+  newElement.textContent = inputText.value;
+  fruitList.appendChild(newElement);
+  inputText.value = "";
+  e;
+};
+
+document.querySelector("#addFruitBtn").addEventListener("click", addFruit);

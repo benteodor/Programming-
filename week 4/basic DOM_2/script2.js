@@ -11,6 +11,32 @@ Ensure the input field is cleared after adding the fruit to the list.
 
 */
 
+const button = document.querySelector("#addFruitBtn");
+
+const addDetails = () => {
+  const fruitInput = document.querySelector("#fruitInput").value.trim();
+  const fruitList = document.querySelector("#fruitList");
+
+  if (fruitInput) {
+    const newLi = document.createElement("li");
+    newLi.textContent = fruitInput;
+    fruitList.appendChild(newLi);
+    fruitInput.value = " ";
+  } else {
+    alert("Please give me a name");
+  }
+};
+
+addEventListener("click", addDetails);
+
+/*const button = document.querySelector("#addFruitBtn");
+const addDetails = () => {
+  alert("it works!");
+};
+
+button.addEventListener("click", addDetails);*/
+
+/*
 let inputText = document.querySelector("#fruitInput");
 let fruitList = document.querySelector("#fruitList");
 
@@ -19,7 +45,7 @@ const addFruit = () => {
   newElement.textContent = inputText.value;
   fruitList.appendChild(newElement);
   inputText.value = "";
-  e;
 };
 
 document.querySelector("#addFruitBtn").addEventListener("click", addFruit);
+*/

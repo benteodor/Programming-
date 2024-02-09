@@ -53,10 +53,11 @@ let newMembers = ["Tina", "Dean"];
 newMembers1 = teamMembers.concat(newMembers);
 console.log(newMembers1);*/
 
-let teamMembers = ["John", "Emily", "Mike", "Sarah"];
+/*let teamMembers = ["John", "Emily", "Mike", "Sarah"];
 
-function elementCount(teamMembers, elementCount) {
-  return elementCount((currentElement) => currentElement == elementCount)
-    .length;
-}
-console.log(elementCount(teamMembers));
+let count = teamMembers.filter((Element) => {
+  return Element === "John";
+}).length;
+
+console.log(count);
+*/

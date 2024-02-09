@@ -61,3 +61,17 @@ let count = teamMembers.filter((Element) => {
 
 console.log(count);
 */
+
+/*let teamMembers = ["John", "Emily", "Mike", "Sarah"];
+
+let uppers = teamMembers.map(function (x) {
+  return x.toUpperCase();
+});
+
+console.log(uppers);*/
+
+let teamMembers = ["John", "Emily", "Mike", "Sarah"];
+
+let upperCased = teamMembers.map((name) => name.toUpperCase());
+
+console.log(upperCased);

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pancake Maker</title>
+    <link rel="stylesheet" href="stylepan.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="image-container">
+        <img src="pancake.jpeg" alt="Delicious pancakes" />
+        <div class="price-banner"><span id="totalPrice">$5</span></div>
+      </div>
+      <div class="form-container">
+        <h2>Customize Your Pancake</h2>
+        <div class="customization-section">
+          <label for="type">Choose your pancake type:</label>
+          <select id="type">
+            <option value="5">Classic - $5</option>
+            <option value="6">Chocolate - $6</option>
+            <option value="7">Blueberry - $7</option>
+          </select>
+        </div>
+        <div class="customization-section">
+          <p>Select your toppings ($1 each):</p>
+          <div>
+          <input type="checkbox" id="nuts"  value="1" />Nuts
+          <label for="nuts">Nuts</label>
+        </div>
+        <div>
+          <input type="checkbox" id="bananas" value="1" />Bananas
+          <label for="bananas">Bananas</label>
+        </div>
+          <div>
+          <input type="checkbox" id="syrup" value="1" />Syrup
+          <label for="Syrup">Syrup</label>
+        </div>
+        <div class="customization-section">
+          <p>Add extras:</p>
+          <div> 
+          <input type="checkbox" id="whippedCream" value="2" />Whipped Cream > 
+          <label for="whippedCream">whippedCream</label></div>
+        
+          <div>
+          <input type="checkbox" id="iceCream" value="3" />Ice Cream - $3<br />
+          <label for="iceCream">iceCream</label>
+        </div>
+        <div class="price-display">
+          <h3>Total Price: <span id="totalPrice">$5</span></h3>
+        </div>
+      </div>
+    </div>
+    <section>
+        <h2>
+        Your details 
+        </h2>
+        <label for="name">Your name</label>
+        <input type="name" id="name">
+        <button>Make order</button>
+    </section>
+    <script src="scriptpan.js"></script>
+  </body>
+</html>

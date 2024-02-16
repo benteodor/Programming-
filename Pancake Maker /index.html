@@ -3,61 +3,231 @@
   <head>
     <meta charset="UTF-8" />
     <title>Pancake Maker</title>
-    <link rel="stylesheet" href="stylepan.css" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/pancakeClassic.webp" type="image/x-icon" />
   </head>
   <body>
+    <!-- main container -->
     <div class="container">
+      <!-- cake display -->
       <div class="image-container">
-        <img src="pancake.jpeg" alt="Delicious pancakes" />
-        <div class="price-banner"><span id="totalPrice">$5</span></div>
+        <img
+          class="imageDefault"
+          src="images/pancakeClassic.webp"
+          alt="Pancake Image"
+          style="visibility: visible"
+        />
+        <img
+          class="toppingImage"
+          id="nutsImage"
+          src="images/pancakeNuts.webp"
+          alt="Pancake nuts topping Image"
+        />
+        <img
+          class="toppingImage"
+          id="bananasImage"
+          src="images/pancakeBananas.webp"
+          alt="Pancake bananas topping Image"
+        />
+        <img
+          class="toppingImage"
+          id="syrupImage"
+          src="images/pancakeSyrup.webp"
+          alt="Pancake syrup topping Image"
+        />
+        <img
+          class="toppingImage"
+          id="whippedCreamImage"
+          src="images/pancakeWhipping.webp"
+          alt="Pancake whipping cream Image"
+        />
+        <img
+          class="toppingImage"
+          id="iceCreamImage"
+          src="images/pancakeIcecream.webp"
+          alt="Pancake icecream Image"
+        />
+        <div class="price-banner">
+          <p>€</p>
+          <span class="totalPrice">5.00</span>
+        </div>
       </div>
-      <div class="form-container">
+      <!-- cake customize section -->
+      <form class="form-container" id="pancake-form">
         <h2>Customize Your Pancake</h2>
         <div class="customization-section">
           <label for="type">Choose your pancake type:</label>
           <select id="type">
-            <option value="5">Classic - $5</option>
-            <option value="6">Chocolate - $6</option>
-            <option value="7">Blueberry - $7</option>
+            <option
+              value="5"
+              data-name="Classic"
+              data-image="images/pancakeClassic.webp"
+            >
+              Classic - €5
+            </option>
+            <option
+              value="6"
+              data-name="Chocolate"
+              data-image="images/pancakeChocolate.webp"
+            >
+              Chocolate - €6
+            </option>
+            <option
+              value="7"
+              data-name="Blueberry"
+              data-image="images/pancakeBlueberry.webp"
+            >
+              Blueberry - €7
+            </option>
           </select>
         </div>
         <div class="customization-section">
-          <p>Select your toppings ($1 each):</p>
-          <div>
-          <input type="checkbox" id="nuts"  value="1" />Nuts
-          <label for="nuts">Nuts</label>
-        </div>
-        <div>
-          <input type="checkbox" id="bananas" value="1" />Bananas
-          <label for="bananas">Bananas</label>
-        </div>
-          <div>
-          <input type="checkbox" id="syrup" value="1" />Syrup
-          <label for="Syrup">Syrup</label>
-        </div>
-        <div class="customization-section">
+          <p>Select your toppings (€1 each):</p>
+          <label for="nuts" class="checkBoxContainer">
+            <input
+              type="checkbox"
+              id="nuts"
+              value="1"
+              data-name="Nuts"
+              data-category="toppings"
+            />
+            <div class="checkBox">
+              <img class="vCheck" src="images/vvector.svg" alt="Decoration" />
+            </div>
+            Nuts
+          </label>
+
+          <label for="bananas" class="checkBoxContainer">
+            <input
+              type="checkbox"
+              id="bananas"
+              value="1"
+              data-name="Bananas"
+              data-category="toppings"
+            />
+            <div class="checkBox">
+              <img class="vCheck" src="images/vvector.svg" alt="Decoration" />
+            </div>
+            Bananas
+          </label>
+
+          <label for="syrup" class="checkBoxContainer">
+            <input
+              type="checkbox"
+              id="syrup"
+              value="1"
+              data-name="Syrup"
+              data-category="toppings"
+            />
+            <div class="checkBox">
+              <img class="vCheck" src="images/vvector.svg" alt="Decoration" />
+            </div>
+            Syrup
+          </label>
+
           <p>Add extras:</p>
-          <div> 
-          <input type="checkbox" id="whippedCream" value="2" />Whipped Cream > 
-          <label for="whippedCream">whippedCream</label></div>
-        
-          <div>
-          <input type="checkbox" id="iceCream" value="3" />Ice Cream - $3<br />
-          <label for="iceCream">iceCream</label>
+          <label for="whippedCream" class="checkBoxContainer">
+            <input
+              type="checkbox"
+              id="whippedCream"
+              value="2"
+              data-name="Whipped cream"
+              data-category="extras"
+            />
+            <div class="checkBox">
+              <img class="vCheck" src="images/vvector.svg" alt="Decoration" />
+            </div>
+            Whipped Cream - €2
+          </label>
+
+          <label for="iceCream" class="checkBoxContainer">
+            <input
+              type="checkbox"
+              id="iceCream"
+              value="3"
+              data-name="Ice cream"
+              data-category="extras"
+            />
+            <div class="checkBox">
+              <img class="vCheck" src="images/vvector.svg" alt="Decoration" />
+            </div>
+            Ice Cream - €3
+          </label>
         </div>
         <div class="price-display">
-          <h3>Total Price: <span id="totalPrice">$5</span></h3>
+          <h3>Total Price: €<span class="totalPrice">5.00</span></h3>
+          <img
+            class="button"
+            id="confirmButton"
+            src="images/confirmButton.svg"
+            alt="Confirm Button"
+          />
+        </div>
+      </form>
+      <!-- confirmation section -->
+      <div class="confirm-container">
+        <label for="backToOrder" onclick="backToOrder()">
+          <p id="backToOrder">&lt; Back to order</p>
+        </label>
+        <h2>Order confirmation</h2>
+        <form class="customization-section">
+          <p>Pancake type: <span id="pancakeTypeConfirm">Classic</span></p>
+          <p>Topping(s): <span id="toppingsDisplay">None</span></p>
+          <p>Extra(s): <span id="extrasDisplay">None</span></p>
+          <h2>Delivery info</h2>
+          <p>
+            Name: <input type="text" name="customerName" id="customerName" />
+          </p>
+          <p>
+            Address:
+            <input type="text" name="customerAddress" id="customerAddress" />
+          </p>
+          <p>
+            Note: <input type="text" name="customerNote" id="customerNote" />
+          </p>
+        </form>
+        <div class="price-display">
+          <h3>Total Price: €<span class="totalPrice">5.00</span></h3>
+          <img
+            class="button"
+            id="orderButton"
+            src="images/orderButton.svg"
+            alt="Order Button"
+          />
         </div>
       </div>
-    </div>
-    <section>
+      <!-- thank you card -->
+      <div class="thank-you-container">
         <h2>
-        Your details 
+          Order confirmed! <br />
+          Let’s get this pancake party flipping!
         </h2>
-        <label for="name">Your name</label>
-        <input type="name" id="name">
-        <button>Make order</button>
-    </section>
-    <script src="scriptpan.js"></script>
+        <!-- <div class="receipt">
+          <div class="receipt-row">
+            <p><span id="receipt-type"></span> pancake</p>
+            <p id="receipt-price"></p>
+          </div>
+          
+          <div class="receipt-row">
+            <p>Total: <span id="receipt-total-price"></span></p>
+          </div>
+        </div> -->
+        <label for="backToOrder" onclick="backToOrder()">
+          <p id="backToOrder">&lt; Order more pancakes</p>
+        </label>
+        <div></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
   </body>
 </html>
+
+<!-- 
+  div - lable - input
+  use <form>
+  just 1 addeventlistener to the form
+  .animate for animation
+  `${abc}` to call a variable as string
+  data-* in html, .dataset.* in JS
+-->

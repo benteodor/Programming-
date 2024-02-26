@@ -1,10 +1,23 @@
 /* Task 1
-Create a JavaScript object named `library` that represents a collection of books.
+Create a JavaScript (array) named `library` that represents a collection of books.
 Each book should have properties for `title`, `author`, and `yearPublished`. 
 Add at least two book objects to this collection.
 */
 
 // Your code here
+
+const library = [
+  {
+    title: "Read people like a book",
+    author: "Patrick King",
+    yearPublished: "2020",
+  },
+  {
+    title: "Zero to one",
+    author: "Blake Masters",
+    yearPublished: "2015",
+  },
+];
 
 /* Task 2
 Access the `title` of the first book in the `library` collection and log it to the console.
@@ -12,6 +25,10 @@ Modify the `yearPublished` for the second book in the collection to a new year, 
 */
 
 // Your code here
+
+console.log(library.title);
+yearPublished.library1 = new year();
+console.log(library1);
 
 /* Task 3
 Use dot notation to add a new property `genres` (an array of strings) to the first book in the `library`.

@@ -7,39 +7,54 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h2>Insert car data</h2>
-    <form>
-      <label for="license plate">License plate</label>
-      <input type="text" name="license plate" /><br />
-      <label for="maker">Car maker</label>
-      <input type="text" name="maker" /><br />
-      <label for="model">Model</label>
-      <input type="number" name="model" /><br />
+    <h2 class="data">Insert car data</h2>
+    <div class="container">
+      <label for="License">License Plate</label>
+      <input
+        type="text"
+        id="License"
+        name="License"
+        placeholder="type here..."
+      />
+      <label for="Car Brand">Car Brand</label>
+      <input
+        type="text"
+        id="Brand"
+        name="Car Brand"
+        placeholder="type here..."
+      />
+      <label for="Car Model">Car Model</label>
+      <input
+        type="text"
+        id="Model"
+        name="Car Model"
+        placeholder="type here..."
+      />
       <label for="Car Owner">Car Owner</label>
-      <input type="name" name="Car Owner" /><br />
-      <label for="color">Car color</label>
-      <input type="text" name="color" />
-    </form>
-    <button>Add car</button>
-    <button>Reset</button>
-    <h2>Cars database</h2>
-    <table>
+      <input
+        type="text"
+        id="Owner"
+        name="Car Owner"
+        placeholder="type here..."
+      />
+      <label for="Car Color">Car Color</label>
+      <input
+        type="text"
+        id="Color"
+        name="Car Color"
+        placeholder="type here..."
+      />
+      <button id="entry">Send data</button>
+    </div>
+    <table id="display">
       <tr>
         <th>License Plate</th>
-      </tr>
-
-      <tr>
-        <th>Car Maker</th>
-      </tr>
-      <tr>
+        <th>Car Brand</th>
         <th>Car Model</th>
-      </tr>
-      <tr>
-        <th>Car Ownder</th>
-      </tr>
-      <tr>
+        <th>Car Owner</th>
         <th>Car Color</th>
       </tr>
     </table>
   </body>
+  <script src="script.js"></script>
 </html>

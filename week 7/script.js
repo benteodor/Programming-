@@ -33,7 +33,7 @@ Catch the ReferenceError and log it to the console.
 */
 
 function task2() {
-  console.log(name);
+  console.log(phone);
 }
 task2();
 
@@ -42,7 +42,17 @@ task2();
 Use a try-catch-finally block. In the finally block, log 'Execution completed'.
 */
 
-function task3() {}
+function task3() {
+  try {
+    console.log("Inside try block");
+    console.log(fox);
+    throw new Error("Test error");
+  } catch (error) {
+    console.log("Error caught");
+  } finally {
+    console.log("Execution completed");
+  }
+}
 
 // Task 4: Nested Try-Catch
 /*
@@ -51,7 +61,16 @@ Simulate an error in the nested try block and handle it in the nested catch bloc
 */
 
 function task4() {
-  // Code here
+  try {
+    console.log("Outer try block");
+    try {
+      throw new Error("Nested error occurred");
+    } catch (error) {
+      console.log("Nested catch block:", error.message);
+    }
+  } catch (error) {
+    console.log("Outer catch block:", error.message);
+  }
 }
 
 // Task 5: Function with Try-Catch
@@ -60,5 +79,14 @@ Create a function that uses try-catch to handle an array index out of bounds err
 */
 
 function task5(array, index) {
-  // Code here
+  try {
+    if (index < 0 || index >= array.length) {
+      throw new Error("Index out of bounds");
+    }
+    console.log("Value:", array[index]);
+  } catch (error) {
+    console.error(error.message);
+  }
 }
+
+task5([1, 2, 3], 5);

@@ -28,6 +28,11 @@
   cursor: pointer;
 }
 
+#back {
+  background-color: orange;
+  cursor: pointer;
+}
+
 table th {
   border: 2px solid black;
   height: 50px;
@@ -37,4 +42,11 @@ table {
   border-collapse: collapse;
   width: 100%;
   margin-top: 15px;
+}
+
+footer {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }

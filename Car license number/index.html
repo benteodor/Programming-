@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Car license plate</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="favicon-16x16.png" type="image/x-icon" />
   </head>
   <body>
-    <h2 class="data">Insert car data</h2>
+    <h2 class="data">Cars database</h2>
     <div class="container">
       <label for="License">License Plate</label>
       <input
@@ -39,12 +40,13 @@
       />
       <label for="Car Color">Car Color</label>
       <input
-        type="text"
+        type="color"
         id="Color"
         name="Car Color"
         placeholder="type here..."
       />
-      <button id="entry">Send data</button>
+      <button type="submit" id="entry">Send data</button>
+      <button type="reset" id="back">Reset form</button>
     </div>
     <table id="display">
       <tr>
@@ -55,6 +57,7 @@
         <th>Car Color</th>
       </tr>
     </table>
+    <footer>Copyright &copy; Teodor Popa</footer>
+    <script src="script.js"></script>
   </body>
-  <script src="script.js"></script>
 </html>

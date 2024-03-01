@@ -2,12 +2,22 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overscroll-behavior: none;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background-color: lavenderblush;
   font-family: Impact, sans-serif;
   color: white;
+}
+
+header,
+section,
+footer {
+  padding: 1rem;
 }
 
 header {
@@ -15,6 +25,8 @@ header {
   justify-content: space-between;
   align-items: center;
   height: 100px;
+  position: sticky;
+  top: 0;
 }
 
 nav ul li {
@@ -33,4 +45,30 @@ section {
 section:first-child,
 header {
   background-color: purple;
+}
+
+section:nth-child(2) {
+  header {
+    background-color: violet;
+  }
+}
+
+footer {
+  background-color: brown;
+}
+
+button {
+  border: none;
+  border-radius: 5px;
+  box-shadow: none;
+  padding: 0.5rem 1rem;
+  background-color: orange;
+  font-size: inherit;
+  font-size: inherit;
+}
+
+#backToTop {
+  position: fixed;
+  bottom: 0.5rem;
+  right: 2rem;
 }

@@ -1,6 +1,24 @@
 const header = document.querySelector("header");
 const backToTop = document.querySelector("#backToTop");
 const backToTopButton = document.querySelector("#backToTop");
+const menuItems = document.querySelectorAll("nav ul li a");
+const modalButton = document.querySelector(".modalButton");
+const overlay = document.querySelector(".overlay");
+const clossButton = document.querySelector(".closeButton");
+
+const toggleModal = () => {
+  overlay.classList.toggle("visible");
+};
+
+mobButton.addEventListener("click", toggleMenu);
+menuItems.forEach((item) => item.addEventListener("click", toggleMenu));
+
+const toggleMenu = () => {
+  navigator.classList.toggle("responsive");
+};
+
+modalButton.addEventListener("click", toggleModal);
+closeButton.addEventListener("click", toggleModal);
 
 /* const getToTop = () => {
   document.body.scrollTop = 0;
